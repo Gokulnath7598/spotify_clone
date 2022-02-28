@@ -15,10 +15,11 @@ class Myapp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return  MaterialApp(
       debugShowCheckedModeBanner: false,
       home: const HomePage(),
       theme: ThemeData.dark(),
+    //),
     );
   }
 }
@@ -36,7 +37,16 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: show(index),
+      body: Container(
+        decoration: const BoxDecoration(
+        gradient: LinearGradient(colors: [
+        // Color.fromARGB(1,128,0,128),
+        Colors.purple,
+        Colors.black,
+        ], begin: Alignment.topLeft, end: FractionalOffset(0.3, 0.3)),
+    ),
+    child: show(index),
+      ),
       bottomNavigationBar: BottomNavigationBar(
           backgroundColor: Colors.transparent,
           type: BottomNavigationBarType.fixed,

@@ -30,6 +30,14 @@ class _TracklistState extends State<Tracklist> {
       theme: ThemeData.dark(),
       home: Scaffold(
         appBar: AppBar(
+          leading: IconButton(
+            icon: const Icon(Icons.arrow_back_ios),
+            iconSize: 20.0,
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
+          centerTitle: true,
           title: const Text('Tracks'),
         ),
         body: Column(

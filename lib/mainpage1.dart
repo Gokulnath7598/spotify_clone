@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify_clone/settings.dart';
 import 'package:spotify_clone/spotifyapi/getartists.dart';
 import 'package:spotify_clone/tracklist.dart';
 import 'spotifyapi/getalbum.dart';
@@ -23,15 +24,17 @@ class _MainPageState extends State<MainPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(colors: [
-          // Color.fromARGB(1,128,0,128),
-          Colors.purple,
-          Colors.black,
-        ], begin: Alignment.topLeft, end: FractionalOffset(0.3, 0.3)),
-      ),
-      child: ListView(
+    return
+      // Container(
+      // decoration: const BoxDecoration(
+      //   gradient: LinearGradient(colors: [
+      //     // Color.fromARGB(1,128,0,128),
+      //     Colors.purple,
+      //     Colors.black,
+      //   ], begin: Alignment.topLeft, end: FractionalOffset(0.3, 0.3)),
+      // ),
+      // child:
+      ListView(
         children: [
           SingleChildScrollView(
             scrollDirection: Axis.vertical,
@@ -61,7 +64,7 @@ class _MainPageState extends State<MainPage> {
                             ),
                           ),
                           Row(
-                            children: const [
+                            children: [
                               Icon(Icons.notifications_active_outlined),
                               SizedBox(
                                 width: 10,
@@ -70,7 +73,15 @@ class _MainPageState extends State<MainPage> {
                               SizedBox(
                                 width: 10,
                               ),
-                              Icon(Icons.settings),
+                              InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => Settings()),
+                                    );
+                                  },
+                                  child: Icon(Icons.settings)),
                               SizedBox(
                                 width: 10,
                               ),
@@ -208,7 +219,7 @@ class _MainPageState extends State<MainPage> {
             ),
           ),
         ],
-      ),
+      //),
     );
   }
 }
