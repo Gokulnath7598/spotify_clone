@@ -359,13 +359,6 @@
             </list>
           </value>
         </entry>
-        <entry key="oauth2">
-          <value>
-            <list>
-              <option value="D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/oauth2-2.0.0/lib" />
-            </list>
-          </value>
-        </entry>
         <entry key="package_config">
           <value>
             <list>
@@ -398,13 +391,6 @@
           <value>
             <list>
               <option value="D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-2.0.5/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="pedantic">
-          <value>
-            <list>
-              <option value="D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/pedantic-1.11.1/lib" />
             </list>
           </value>
         </entry>
@@ -461,6 +447,13 @@
           <value>
             <list>
               <option value="D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/redux-5.0.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="redux_thunk">
+          <value>
+            <list>
+              <option value="D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/redux_thunk-0.4.0/lib" />
             </list>
           </value>
         </entry>
@@ -552,13 +545,6 @@
           <value>
             <list>
               <option value="D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/source_span-1.8.1/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="spotify">
-          <value>
-            <list>
-              <option value="D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/spotify-0.7.0/lib" />
             </list>
           </value>
         </entry>
@@ -711,13 +697,11 @@
       <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/matcher-0.12.10/lib" />
       <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/meta-1.7.0/lib" />
       <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/mime-1.0.1/lib" />
-      <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/oauth2-2.0.0/lib" />
       <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/package_config-2.0.2/lib" />
       <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/path-1.8.0/lib" />
       <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-2.1.5/lib" />
       <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_platform_interface-2.0.3/lib" />
       <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-2.0.5/lib" />
-      <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/pedantic-1.11.1/lib" />
       <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/platform-3.1.0/lib" />
       <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/plugin_platform_interface-2.1.2/lib" />
       <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/pool-1.5.0/lib" />
@@ -726,6 +710,7 @@
       <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/pubspec_parse-1.2.0/lib" />
       <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/quiver-3.0.1+1/lib" />
       <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/redux-5.0.0/lib" />
+      <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/redux_thunk-0.4.0/lib" />
       <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences-2.0.12/lib" />
       <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_android-2.0.10/lib" />
       <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_ios-2.0.9/lib" />
@@ -738,7 +723,6 @@
       <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/shelf_web_socket-1.0.1/lib" />
       <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/source_gen-1.2.1/lib" />
       <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/source_span-1.8.1/lib" />
-      <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/spotify-0.7.0/lib" />
       <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/stack_trace-1.10.0/lib" />
       <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/stream_channel-2.1.0/lib" />
       <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/stream_transform-2.0.0/lib" />

@@ -7,5 +7,9 @@ AppState reducer(AppState prevState, dynamic action){
     {
       newState.name = action.payload;
     }
+  if(action is update_tracks)
+  {
+    newState.tracklist = action.payload;
+  }
   return newState;
 }

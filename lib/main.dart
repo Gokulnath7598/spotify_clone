@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:redux_thunk/redux_thunk.dart';
 import 'package:spotify_clone/redux/reducers.dart';
-import 'mainpage1.dart';
+import 'package:spotify_clone/spotifyapi/gettracks.dart';
+import 'mainpage2.dart';
 import 'model/app_state.dart';
 import 'search.dart';
 import 'library.dart';
@@ -10,8 +12,8 @@ import 'package:redux/redux.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
 Future<void> main() async {
-  final _initState = AppState(name: 'Gocool', mail: 'gocool7598@gmail.com');
-  final Store<AppState> _store = Store<AppState>(reducer,initialState: _initState);
+  final _initState = AppState(name: 'Gocool', mail: 'gocool7598@gmail.com', tracklist: [Tracks(name: 'name', url: 'https://i.scdn.co/image/ab67616d0000b27326597c053b38c9cf93f8f3a9', artistname: 'artistname')]);
+  final Store<AppState> _store = Store<AppState>(reducer,initialState: _initState,middleware: [thunkMiddleware]);
   runApp(Myapp(store: _store));
 }
 // void main()=> runApp(const Myapp());

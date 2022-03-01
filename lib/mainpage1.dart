@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_redux/flutter_redux.dart';
+import 'package:spotify_clone/redux/actions.dart';
 import 'package:spotify_clone/settings.dart';
 import 'package:spotify_clone/spotifyapi/getartists.dart';
 import 'package:spotify_clone/tracklist.dart';
+import 'package:spotify_clone/tracklist1.dart';
+import 'model/app_state.dart';
 import 'spotifyapi/getalbum.dart';
 
 class MainPage extends StatefulWidget {
@@ -102,38 +106,50 @@ class _MainPageState extends State<MainPage> {
                                   itemCount: items.length,
                                   itemBuilder: (context, index) {
                                     Album item = items[index];
-                                    return InkWell(
-                                      onTap: () {
-                                        Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) => Tracklist(
-                                                  tracks: item.tracks,
-                                                  album: item.name)),
+                                    return StoreConnector<AppState, Function>(
+                                      converter: (store) => () =>
+                                          store.dispatch(getval(item.tracks)),
+                                      builder: (context, callback) {
+                                        return InkWell(
+                                          onTap: () async{
+                                            await callback();
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) => TrackL(
+                                                    tracks: item.tracks,
+                                                    album: item.name,
+                                                  )
+                                                // (context) => Tracklist(
+                                                // tracks: item.tracks,
+                                                // album: item.name)
+                                              ),
+                                            );
+                                          },
+                                          child: Column(
+                                            children: [
+                                              SizedBox(
+                                                height: 130.0,
+                                                width: 140.0,
+                                                child: Image.network(
+                                                  item.url.toString(),
+                                                  fit: BoxFit.fitHeight,
+                                                ),
+                                              ),
+                                              const SizedBox(
+                                                height: 6,
+                                              ),
+                                              Text(
+                                                item.name.toString(),
+                                                style: const TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: 10.0,
+                                                ),
+                                              )
+                                            ],
+                                          ),
                                         );
                                       },
-                                      child: Column(
-                                        children: [
-                                          SizedBox(
-                                            height: 130.0,
-                                            width: 140.0,
-                                            child: Image.network(
-                                              item.url.toString(),
-                                              fit: BoxFit.fitHeight,
-                                            ),
-                                          ),
-                                          const SizedBox(
-                                            height: 6,
-                                          ),
-                                          Text(
-                                            item.name.toString(),
-                                            style: const TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 10.0,
-                                            ),
-                                          )
-                                        ],
-                                      ),
                                     );
                                   },
                                 );
