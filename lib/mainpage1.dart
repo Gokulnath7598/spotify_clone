@@ -65,25 +65,23 @@ class _MainPageState extends State<MainPage> {
                           ),
                           Row(
                             children: [
-                              Icon(Icons.notifications_active_outlined),
-                              SizedBox(
+                              IconButton(onPressed: (){}, icon: const Icon(Icons.notifications_active_outlined),),
+                              const SizedBox(
                                 width: 10,
                               ),
-                              Icon(Icons.settings_backup_restore_outlined),
-                              SizedBox(
+                              IconButton(onPressed: (){}, icon: const Icon(Icons.settings_backup_restore_outlined),),
+                              const SizedBox(
                                 width: 10,
                               ),
-                              InkWell(
-                                  onTap: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) => Settings()),
-                                    );
-                                  },
-                                  child: Icon(Icons.settings)),
-                              SizedBox(
-                                width: 10,
+                              IconButton(onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const Settings()),
+                                );
+                              }, icon: const Icon(Icons.settings)),
+                              const SizedBox(
+                                width: 0,
                               ),
                             ],
                           )

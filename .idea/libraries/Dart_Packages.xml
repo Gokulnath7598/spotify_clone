@@ -226,6 +226,13 @@
             </list>
           </value>
         </entry>
+        <entry key="flutter_redux">
+          <value>
+            <list>
+              <option value="D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_redux-0.8.2/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="flutter_test">
           <value>
             <list>
@@ -447,6 +454,13 @@
           <value>
             <list>
               <option value="D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/quiver-3.0.1+1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="redux">
+          <value>
+            <list>
+              <option value="D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/redux-5.0.0/lib" />
             </list>
           </value>
         </entry>
@@ -680,6 +694,7 @@
       <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/file-6.1.2/lib" />
       <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/fixnum-1.0.0/lib" />
       <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_lints-1.0.4/lib" />
+      <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_redux-0.8.2/lib" />
       <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/font_awesome_flutter-9.2.0/lib" />
       <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/frontend_server_client-2.1.2/lib" />
       <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/glob-2.0.2/lib" />
@@ -710,6 +725,7 @@
       <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/pub_semver-2.1.0/lib" />
       <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/pubspec_parse-1.2.0/lib" />
       <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/quiver-3.0.1+1/lib" />
+      <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/redux-5.0.0/lib" />
       <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences-2.0.12/lib" />
       <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_android-2.0.10/lib" />
       <root url="file://D:/Mobile_App/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_ios-2.0.9/lib" />

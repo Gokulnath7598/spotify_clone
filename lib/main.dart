@@ -1,25 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:spotify_clone/redux/reducers.dart';
 import 'mainpage1.dart';
+import 'model/app_state.dart';
 import 'search.dart';
 import 'library.dart';
 import 'premium.dart';
+import 'package:redux/redux.dart';
+import 'package:flutter_redux/flutter_redux.dart';
 
 Future<void> main() async {
-  runApp(const Myapp());
+  final _initState = AppState(name: 'Gocool', mail: 'gocool7598@gmail.com');
+  final Store<AppState> _store = Store<AppState>(reducer,initialState: _initState);
+  runApp(Myapp(store: _store));
 }
 // void main()=> runApp(const Myapp());
 
 class Myapp extends StatelessWidget {
-  const Myapp({Key? key}) : super(key: key);
+  final Store<AppState> store;
+  const Myapp({Key? key, required this.store}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: const HomePage(),
-      theme: ThemeData.dark(),
-    //),
+    return  StoreProvider<AppState>(
+      store: store,
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: const HomePage(),
+        theme: ThemeData.dark(),
+      ),
     );
   }
 }
