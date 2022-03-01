@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'package:spotify_clone/redux/actions.dart';
+import 'package:spotify_clone/redux/trunkactions.dart';
 import 'package:spotify_clone/spotifyapi/gettracks.dart';
 
 import 'model/app_state.dart';
 
-class TrackL extends StatelessWidget {
+class TrackList extends StatelessWidget {
   final List<dynamic> tracks;
   final String album;
 
-  const TrackL({Key? key, required this.tracks, required this.album})
+  const TrackList({Key? key, required this.tracks, required this.album})
       : super(key: key);
 
   @override
@@ -17,7 +17,7 @@ class TrackL extends StatelessWidget {
     String album = this.album;
     List<dynamic> tracks = this.tracks;
     return StoreConnector<AppState, VoidCallback>(
-      converter: (store) => () => store.dispatch(getval(tracks)),
+      converter: (store) => () => store.dispatch(gettracks(tracks)),
       builder: (context, callback) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
@@ -43,7 +43,7 @@ class TrackL extends StatelessWidget {
                     alignment: Alignment.topLeft,
                     child: Text(
                       album,
-                      style: TextStyle(
+                      style: const TextStyle(
                           fontSize: 23.0, fontWeight: FontWeight.bold),
                     ),
                   ),
@@ -67,7 +67,7 @@ class TrackL extends StatelessWidget {
                               itemBuilder: (context, index) {
                                 Tracks item = state.tracklist[index];
                                 return ListTile(
-                                  contentPadding: EdgeInsets.all(5),
+                                  contentPadding: const EdgeInsets.all(5),
                                   title: Text(item.name.toString()),
                                   leading: Image.network(
                                     item.url.toString(),

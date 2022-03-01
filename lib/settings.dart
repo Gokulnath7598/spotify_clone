@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:spotify_clone/main.dart';
 import 'package:spotify_clone/profile.dart';
-import 'package:spotify_clone/redux/actions.dart';
 
 import 'model/app_state.dart';
 

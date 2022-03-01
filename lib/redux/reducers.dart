@@ -11,5 +11,13 @@ AppState reducer(AppState prevState, dynamic action){
   {
     newState.tracklist = action.payload;
   }
+  if(action is update_artist)
+  {
+    newState.artistlist = action.payload;
+  }
+  if(action is update_album)
+  {
+    newState.albumlist = action.payload;
+  }
   return newState;
 }

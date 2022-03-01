@@ -17,9 +17,9 @@ class Profile extends StatelessWidget {
       theme: ThemeData.dark(),
       home: Scaffold(
         body: SingleChildScrollView(
-          child: StoreConnector<AppState,AppState>(
-            converter: (store) =>  store.state ,
-            builder: (context,state){
+          child: StoreConnector<AppState, AppState>(
+            converter: (store) => store.state,
+            builder: (context, state) {
               return Column(
                 children: [
                   const SizedBox(
@@ -58,8 +58,8 @@ class Profile extends StatelessWidget {
                   Center(
                     child: Text(
                       state.mail.toString(),
-                      style: const TextStyle(
-                          fontSize: 20.0,color: Colors.grey),
+                      style:
+                          const TextStyle(fontSize: 20.0, color: Colors.grey),
                     ),
                   ),
                   const SizedBox(
@@ -76,7 +76,7 @@ class Profile extends StatelessWidget {
                     height: 10,
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 30,right: 30),
+                    padding: const EdgeInsets.only(left: 30, right: 30),
                     child: TextField(
                       textAlign: TextAlign.center,
                       controller: namecontroller,
@@ -92,11 +92,14 @@ class Profile extends StatelessWidget {
                     height: 10,
                   ),
                   Center(
-                    child: RaisedButton(onPressed:
-                        ()=>{
-              FocusScope.of(context).requestFocus(FocusNode()),
-                      StoreProvider.of<AppState>(context).dispatch(update_name(namecontroller.text.toString()))
-                        },child: const Text('Edit'),),
+                    child: ElevatedButton(
+                      onPressed: () => {
+                        FocusScope.of(context).requestFocus(FocusNode()),
+                        StoreProvider.of<AppState>(context).dispatch(
+                            update_name(namecontroller.text.toString()))
+                      },
+                      child: const Text('Edit'),
+                    ),
                   ),
                 ],
               );
