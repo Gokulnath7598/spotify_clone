@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:redux_thunk/redux_thunk.dart';
+import 'package:spotify_clone/model/album.dart';
+import 'package:spotify_clone/model/artist.dart';
+import 'package:spotify_clone/model/tracks.dart';
 import 'package:spotify_clone/redux/reducers.dart';
-import 'package:spotify_clone/spotifyapi/getalbum.dart';
-import 'package:spotify_clone/spotifyapi/getartists.dart';
-import 'package:spotify_clone/spotifyapi/gettracks.dart';
-import 'mainpage2.dart';
-import 'model/app_state.dart';
+import 'mainpage.dart';
+import '../model/app_state.dart';
 import 'search.dart';
 import 'library.dart';
 import 'premium.dart';
@@ -16,7 +16,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 Future<void> main() async {
   final _initState = AppState(name: 'Gocool',
       mail: 'gocool7598@gmail.com',
-      tracklist: [const Tracks(name: 'name', url: 'https://i.scdn.co/image/ab67616d0000b27326597c053b38c9cf93f8f3a9', artistname: 'artistname')],
+      tracklist: [const Track(name: 'name', url: 'https://i.scdn.co/image/ab67616d0000b27326597c053b38c9cf93f8f3a9', artistname: 'artistname')],
       artistlist: [const Artist(name: 'name', url: 'https://i.scdn.co/image/ab6761610000e5eb2dc40ac263ef07c16a95af4e')],
       albumlist: [const Album(name: 'name', url: 'https://i.scdn.co/image/ab67616d0000b27326597c053b38c9cf93f8f3a9', tracks: [])]);
   final Store<AppState> _store = Store<AppState>(reducer,initialState: _initState,middleware: [thunkMiddleware]);
@@ -56,13 +56,13 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
-        gradient: LinearGradient(colors: [
-        // Color.fromARGB(1,128,0,128),
-        Colors.purple,
-        Colors.black,
-        ], begin: Alignment.topLeft, end: FractionalOffset(0.3, 0.3)),
-    ),
-    child: show(index),
+          gradient: LinearGradient(colors: [
+            // Color.fromARGB(1,128,0,128),
+            Colors.purple,
+            Colors.black,
+          ], begin: Alignment.topLeft, end: FractionalOffset(0.3, 0.3)),
+        ),
+        child: show(index),
       ),
       bottomNavigationBar: BottomNavigationBar(
           backgroundColor: Colors.transparent,

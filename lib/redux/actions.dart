@@ -1,7 +1,6 @@
-
-import 'package:spotify_clone/spotifyapi/getalbum.dart';
-import 'package:spotify_clone/spotifyapi/getartists.dart';
-import 'package:spotify_clone/spotifyapi/gettracks.dart';
+import 'package:spotify_clone/model/album.dart';
+import 'package:spotify_clone/model/artist.dart';
+import 'package:spotify_clone/model/tracks.dart';
 
 class update_name {
   late final String payload;
@@ -10,7 +9,7 @@ class update_name {
 }
 
 class update_tracks {
-  late final List<Tracks> payload;
+  late final List<Track> payload;
 
   update_tracks(this.payload);
 }

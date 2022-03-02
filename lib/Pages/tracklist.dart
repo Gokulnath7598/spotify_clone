@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'package:spotify_clone/redux/trunkactions.dart';
+import 'package:spotify_clone/model/tracks.dart';
 import 'package:spotify_clone/spotifyapi/gettracks.dart';
 
-import 'model/app_state.dart';
+import '../model/app_state.dart';
 
 class TrackList extends StatelessWidget {
   final List<dynamic> tracks;
@@ -65,7 +65,7 @@ class TrackList extends StatelessWidget {
                               scrollDirection: Axis.vertical,
                               itemCount: state.tracklist.length,
                               itemBuilder: (context, index) {
-                                Tracks item = state.tracklist[index];
+                                Track item = state.tracklist[index];
                                 return ListTile(
                                   contentPadding: const EdgeInsets.all(5),
                                   title: Text(item.name.toString()),

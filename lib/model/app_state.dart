@@ -1,12 +1,11 @@
-
-import 'package:spotify_clone/spotifyapi/getalbum.dart';
-import 'package:spotify_clone/spotifyapi/getartists.dart';
-import 'package:spotify_clone/spotifyapi/gettracks.dart';
+import 'package:spotify_clone/model/tracks.dart';
+import 'album.dart';
+import 'artist.dart';
 
 class AppState{
   late String name;
   late String mail;
-  late List<Tracks> tracklist;
+  late List<Track> tracklist;
   late List<Artist> artistlist;
   late List<Album> albumlist;
   AppState({required this.name,required this.mail,required this.tracklist,required this.artistlist,required this.albumlist});
@@ -20,7 +19,7 @@ class AppState{
   }
   String get viewname => name;
   String get viewmail => mail;
-  List<Tracks> get viewtracklist => tracklist;
+  List<Track> get viewtracklist => tracklist;
   List<Artist> get viewartistlist => artistlist;
   List<Album> get viewalbumlist => albumlist;
 }

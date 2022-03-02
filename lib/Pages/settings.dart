@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'package:spotify_clone/main.dart';
-import 'package:spotify_clone/profile.dart';
+import 'package:spotify_clone/Pages/main.dart';
+import 'package:spotify_clone/Pages/profile.dart';
 
-import 'model/app_state.dart';
+import '../model/app_state.dart';
 
 class Settings extends StatelessWidget {
   const Settings({Key? key}) : super(key: key);

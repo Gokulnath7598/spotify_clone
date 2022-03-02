@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'package:spotify_clone/redux/trunkactions.dart';
-import 'package:spotify_clone/settings.dart';
+import 'package:spotify_clone/Pages/settings.dart';
+import 'package:spotify_clone/model/album.dart';
+import 'package:spotify_clone/model/artist.dart';
 import 'package:spotify_clone/spotifyapi/getartists.dart';
-import 'package:spotify_clone/tracklist.dart';
-import 'model/app_state.dart';
-import 'spotifyapi/getalbum.dart';
+import 'package:spotify_clone/spotifyapi/gettracks.dart';
+import 'package:spotify_clone/Pages/tracklist.dart';
+import '../model/app_state.dart';
+import '../spotifyapi/getalbum.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -42,19 +44,19 @@ class MainPage extends StatelessWidget {
                         ),
                         Row(
                           children: [
-                             IconButton(
-                                  onPressed: () {},
-                                  icon: const Icon(
-                                      Icons.notifications_active_outlined),
-                                ),
+                            IconButton(
+                              onPressed: () {},
+                              icon: const Icon(
+                                  Icons.notifications_active_outlined),
+                            ),
                             const SizedBox(
                               width: 10,
                             ),
-                             IconButton(
-                                  onPressed: () {},
-                                  icon: const Icon(
-                                      Icons.settings_backup_restore_outlined),
-                                ),
+                            IconButton(
+                              onPressed: () {},
+                              icon: const Icon(
+                                  Icons.settings_backup_restore_outlined),
+                            ),
                             const SizedBox(
                               width: 10,
                             ),
@@ -95,13 +97,13 @@ class MainPage extends StatelessWidget {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) => TrackList(
-                                                    tracks: item.tracks,
-                                                    album: item.name,
-                                                  )
-                                              // (context) => Tracklist(
-                                              // tracks: item.tracks,
-                                              // album: item.name)
-                                              ),
+                                                tracks: item.tracks,
+                                                album: item.name,
+                                              )
+                                            // (context) => Tracklist(
+                                            // tracks: item.tracks,
+                                            // album: item.name)
+                                          ),
                                         );
                                       },
                                       child: Column(

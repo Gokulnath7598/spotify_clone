@@ -2,9 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:spotify_clone/redux/actions.dart';
-import 'package:spotify_clone/settings.dart';
+import 'package:spotify_clone/Pages/settings.dart';
 
-import 'model/app_state.dart';
+import '../model/app_state.dart';
 
 class Profile extends StatelessWidget {
   const Profile({Key? key}) : super(key: key);
