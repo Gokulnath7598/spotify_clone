@@ -205,9 +205,9 @@ class MainPage extends StatelessWidget {
                       converter: (store) => () => store.dispatch(getartist()),
                       builder: (context, callback) {
                         return ElevatedButton(
-                          onPressed: () {
+                          onPressed: () async {
                             callback();
-                            callback1();
+                            await callback1();
                           },
                           child: const Text('Load Data'),
                         );

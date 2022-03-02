@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:spotify_clone/Pages/main.dart';
 import 'package:spotify_clone/Pages/profile.dart';
-
 import '../model/app_state.dart';
+import 'location.dart';
 
 class Settings extends StatelessWidget {
   const Settings({Key? key}) : super(key: key);
@@ -68,6 +68,24 @@ class Settings extends StatelessWidget {
                             ),
                             subtitle: const Text('View Your Profile'),
                             trailing: const Icon(Icons.arrow_forward_ios),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const Locationpage()),
+                            );
+                          },
+                          child: const ListTile(
+                            leading: Icon(Icons.my_location_outlined),
+
+                            title: Text(
+                                'My Location',
+                            ),
+                            subtitle: Text('See Your Location'),
+                            trailing: Icon(Icons.arrow_forward_ios),
                           ),
                         ),
                       ],
