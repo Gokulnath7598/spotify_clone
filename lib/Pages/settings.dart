@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
+import 'package:localization/src/localization_extension.dart';
 import 'package:spotify_clone/Pages/main.dart';
 import 'package:spotify_clone/Pages/profile.dart';
 import '../model/app_state.dart';
@@ -36,15 +37,15 @@ class Settings extends StatelessWidget {
                           );
                         },
                       ),
-                      const Expanded(
-                        child: Padding(
-                          padding: EdgeInsets.only(left: 100),
-                          child: Text(
-                            'Settings',
-                            style: TextStyle(
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Expanded(
+                        child: Text(
+                            'Title_Settings'.i18n(),
+                            style: const TextStyle(
                                 fontSize: 23.0, fontWeight: FontWeight.bold),
                           ),
-                        ),
                       ),
                     ],
                   ),
@@ -66,7 +67,7 @@ class Settings extends StatelessWidget {
                             title: Text(
                               state.name.toString(),
                             ),
-                            subtitle: const Text('View Your Profile'),
+                            subtitle: Text('Sub_Title_View_Your_Profile'.i18n()),
                             trailing: const Icon(Icons.arrow_forward_ios),
                           ),
                         ),
@@ -78,14 +79,14 @@ class Settings extends StatelessWidget {
                                   builder: (context) => const Locationpage()),
                             );
                           },
-                          child: const ListTile(
-                            leading: Icon(Icons.my_location_outlined),
+                          child: ListTile(
+                            leading: const Icon(Icons.my_location_outlined),
 
                             title: Text(
-                                'My Location',
+                                'Title_My_Location'.i18n(),
                             ),
-                            subtitle: Text('See Your Location'),
-                            trailing: Icon(Icons.arrow_forward_ios),
+                            subtitle: Text('Sub_Title_Location'.i18n()),
+                            trailing: const Icon(Icons.arrow_forward_ios),
                           ),
                         ),
                       ],

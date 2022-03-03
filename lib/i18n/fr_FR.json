@@ -1,0 +1,19 @@
+{
+  "Nav_Home": "Domicile",
+  "Nav_Search": "Rechercher",
+  "Nav_Library": "Bibliothèque",
+  "Nav_Premium": "Prime",
+  "Title_Albums": "Albums",
+  "Title_Artists": "Artistes",
+  "Title_Tracks": "Des pistes",
+  "Load_Buton" : "Charger les données",
+  "Title_Settings": "Réglages",
+  "Sub_Title_View_Your_Profile": "Afficher votre profil",
+  "Title_My_Location" : "Ma position",
+  "Sub_Title_Location" : "Voir votre emplacement",
+  "Profile_edit_hint" : "Entrez votre nouveau nom de profil",
+  "Edit_Button" : "Éditer",
+  "Get_Location_Button" : "Obtenez votre position actuelle",
+  "Title_Address" : "ADRESSE",
+  "Title_Coordinates" : "Points de coordonnées"
+}

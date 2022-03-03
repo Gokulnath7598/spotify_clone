@@ -1,0 +1,19 @@
+{
+  "Nav_Home": "Home",
+  "Nav_Search": "Search",
+  "Nav_Library": "Library",
+  "Nav_Premium": "Premium",
+  "Title_Albums": "Albums",
+  "Title_Artists": "Artists",
+  "Title_Tracks": "Tracks",
+  "Load_Buton" : "Load Data",
+  "Title_Settings": "Settings",
+  "Sub_Title_View_Your_Profile": "View Your Profile",
+  "Title_My_Location" : "My Location",
+  "Sub_Title_Location" : "See Your Location",
+  "Profile_edit_hint" : "Enter your new profile Name",
+  "Edit_Button" : "Edit",
+  "Get_Location_Button" : "Get Your current Location",
+  "Title_Address" : "ADDRESS",
+  "Title_Coordinates" : "Coordinates Points"
+}

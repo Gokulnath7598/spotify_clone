@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:localization/localization.dart';
 import 'package:redux_thunk/redux_thunk.dart';
 import 'package:spotify_clone/model/album.dart';
 import 'package:spotify_clone/model/artist.dart';
@@ -17,8 +19,8 @@ Future<void> main() async {
   final _initState = AppState(name: 'Gocool',
       mail: 'gocool7598@gmail.com',
       tracklist: [const Track(name: 'name', url: 'https://i.scdn.co/image/ab67616d0000b27326597c053b38c9cf93f8f3a9', artistname: 'artistname')],
-      artistlist: [const Artist(name: 'name', url: 'https://i.scdn.co/image/ab6761610000e5eb2dc40ac263ef07c16a95af4e')],
-      albumlist: [const Album(name: 'name', url: 'https://i.scdn.co/image/ab67616d0000b27326597c053b38c9cf93f8f3a9', tracks: [])]);
+      artistlist: [const Artist(name: 'Artist Name', url: 'https://i.scdn.co/image/ab6761610000e5eb2dc40ac263ef07c16a95af4e')],
+      albumlist: [const Album(name: 'Album Name', url: 'https://i.scdn.co/image/ab67616d0000b27326597c053b38c9cf93f8f3a9', tracks: [])]);
   final Store<AppState> _store = Store<AppState>(reducer,initialState: _initState,middleware: [thunkMiddleware]);
   runApp(Myapp(store: _store));
 }
@@ -30,9 +32,37 @@ class Myapp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    LocalJsonLocalization.delegate.directories = ['lib/i18n'];
     return  StoreProvider<AppState>(
       store: store,
       child: MaterialApp(
+        localeResolutionCallback: (locale, supportedLocales) {
+          if (supportedLocales.contains(locale)) {
+            return locale;
+          }
+          // define pt_BR as default when de language code is 'pt'
+          if (locale?.languageCode == 'fr') {
+            return Locale('fr', 'FR');
+          }
+          if (locale?.languageCode == 'ta') {
+            return Locale('ta', 'IN');
+          }
+          // default language
+          return Locale('en', 'US');
+        },
+        title: 'Spotify',
+        localizationsDelegates: [
+          // delegate from flutter_localization
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+          // delegate from localization package.
+          LocalJsonLocalization.delegate,
+        ],
+        supportedLocales:const [
+          Locale('en','US'),
+          Locale('fr','FR'),
+        ],
         debugShowCheckedModeBanner: false,
         home: const HomePage(),
         theme: ThemeData.dark(),
@@ -77,22 +107,22 @@ class _HomePageState extends State<HomePage> {
               show(index);
             });
           }),
-          items: const [
+          items: [
             BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'Home',
+              icon: const Icon(Icons.home),
+              label: 'Nav_Home'.i18n(),
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.search),
-              label: 'Search',
+              icon: const Icon(Icons.search),
+              label: 'Nav_Search'.i18n(),
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.library_music),
-              label: 'Your Library',
+              icon: const Icon(Icons.library_music),
+              label: 'Nav_Library'.i18n(),
             ),
             BottomNavigationBarItem(
-              icon: FaIcon(FontAwesomeIcons.spotify),
-              label: 'Premium',
+              icon: const FaIcon(FontAwesomeIcons.spotify),
+              label: 'Nav_Premium'.i18n(),
             ),
           ]),
       // ),

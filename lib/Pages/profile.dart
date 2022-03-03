@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
+import 'package:localization/src/localization_extension.dart';
 import 'package:spotify_clone/redux/actions.dart';
 import 'package:spotify_clone/Pages/settings.dart';
 
@@ -80,11 +81,11 @@ class Profile extends StatelessWidget {
                     child: TextField(
                       textAlign: TextAlign.center,
                       controller: namecontroller,
-                      decoration: const InputDecoration(
+                      decoration: InputDecoration(
                         border: InputBorder.none,
                         alignLabelWithHint: true,
-                        hintText: 'Enter your new profile Name',
-                        hintStyle: TextStyle(color: Colors.grey),
+                        hintText: 'Profile_edit_hint'.i18n(),
+                        hintStyle: const TextStyle(color: Colors.grey),
                       ),
                     ),
                   ),
@@ -98,7 +99,7 @@ class Profile extends StatelessWidget {
                         StoreProvider.of<AppState>(context).dispatch(
                             update_name(namecontroller.text.toString()))
                       },
-                      child: const Text('Edit'),
+                      child: Text('Edit_Button'.i18n()),
                     ),
                   ),
                 ],

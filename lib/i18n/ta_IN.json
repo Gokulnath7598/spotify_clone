@@ -1,0 +1,19 @@
+{
+  "Nav_Home": "முகப்பு",
+  "Nav_Search": "தேடு",
+  "Nav_Library": "நூலகம்",
+  "Nav_Premium": "பிரீமியம்",
+  "Title_Albums": "ஆல்பங்கள்",
+  "Title_Artists": "கலைஞர்கள்",
+  "Title_Tracks": "தடங்கள்",
+  "Load_Buton" : "தரவை ஏற்றவும்",
+  "Title_Settings": "அமைப்புகள்",
+  "Sub_Title_View_Your_Profile": "உங்கள் சுயவிவரத்தைக் காண்க",
+  "Title_My_Location" : "எனது இருப்பிடம்",
+  "Sub_Title_Location" : "உங்கள் இருப்பிடத்தைப் பார்க்கவும்",
+  "Profile_edit_hint" : "உங்கள் புதிய சுயவிவரப் பெயரை உள்ளிடவும்",
+  "Edit_Button" : "தொகு",
+  "Get_Location_Button" : "தற்போதைய இருப்பிடத்தைப் பெறுங்கள்",
+  "Title_Address" : "முகவரி",
+  "Title_Coordinates" : "ஆய புள்ளிகள்"
+}

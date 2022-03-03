@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
+import 'package:localization/src/localization_extension.dart';
 import 'package:spotify_clone/Pages/settings.dart';
 import 'package:spotify_clone/model/album.dart';
 import 'package:spotify_clone/model/artist.dart';
@@ -33,11 +34,11 @@ class MainPage extends StatelessWidget {
                       children: [
                         Container(
                           padding: const EdgeInsets.all(12),
-                          child: const Align(
+                          child: Align(
                             alignment: Alignment.topLeft,
                             child: Text(
-                              'Albums',
-                              style: TextStyle(
+                              'Title_Albums'.i18n(),
+                              style: const TextStyle(
                                   fontSize: 23.0, fontWeight: FontWeight.bold),
                             ),
                           ),
@@ -144,11 +145,11 @@ class MainPage extends StatelessWidget {
                   children: <Widget>[
                     Container(
                       padding: const EdgeInsets.all(12),
-                      child: const Align(
+                      child: Align(
                         alignment: Alignment.topLeft,
                         child: Text(
-                          'Artists',
-                          style: TextStyle(
+                          'Title_Artists'.i18n(),
+                          style: const TextStyle(
                               fontSize: 23.0, fontWeight: FontWeight.bold),
                         ),
                       ),
@@ -209,7 +210,7 @@ class MainPage extends StatelessWidget {
                             callback();
                             await callback1();
                           },
-                          child: const Text('Load Data'),
+                          child: Text('Load_Buton'.i18n()),
                         );
                       },
                     );

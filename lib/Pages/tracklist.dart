@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
+import 'package:localization/src/localization_extension.dart';
 import 'package:spotify_clone/model/tracks.dart';
 import 'package:spotify_clone/spotifyapi/gettracks.dart';
 
@@ -32,7 +33,7 @@ class TrackList extends StatelessWidget {
                 },
               ),
               centerTitle: true,
-              title: const Text('Tracks'),
+              title: Text('Title_Tracks'.i18n()),
             ),
             body: Column(
               //crossAxisAlignment: CrossAxisAlignment.center,

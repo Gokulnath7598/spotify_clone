@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:localization/src/localization_extension.dart';
 import 'package:spotify_clone/Pages/settings.dart';
 
 
@@ -64,15 +65,15 @@ class _LocationpageState extends State<Locationpage> {
                     );
                   },
                 ),
-                const Expanded(
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 100),
-                    child: Text(
-                      'My Location',
-                      style: TextStyle(
+                const SizedBox(
+                  width: 10,
+                ),
+                Expanded(
+                  child: Text(
+                      'Title_My_Location'.i18n(),
+                      style: const TextStyle(
                           fontSize: 23.0, fontWeight: FontWeight.bold),
                     ),
-                  ),
                 ),
               ],
             ),
@@ -83,13 +84,13 @@ class _LocationpageState extends State<Locationpage> {
               Position position = await _getGeoLocationPosition();
               location ='Lat: ${position.latitude} , Long: ${position.longitude}';
               GetAddressFromLatLong(position);
-            }, child: const Text('Get Your current Location')),
+            }, child: Text('Get_Location_Button'.i18n())),
             const SizedBox(height: 10,),
-            const Text('ADDRESS',style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),),
+            Text('Title_Address'.i18n(),style: const TextStyle(fontSize: 22,fontWeight: FontWeight.bold),),
             const SizedBox(height: 10,),
             Text(Address),
             const SizedBox(height: 10,),
-            const Text('Coordinates Points',style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),),
+            Text('Title_Coordinates'.i18n(),style: const TextStyle(fontSize: 22,fontWeight: FontWeight.bold),),
             const SizedBox(height: 10,),
             Text(location,style: const TextStyle(color: Colors.black,fontSize: 16),),
           ],
