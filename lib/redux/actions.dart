@@ -26,4 +26,8 @@ class update_album {
   update_album(this.payload);
 }
 
+class update_image {
+  late final String payload;
 
+  update_image(this.payload);
+}

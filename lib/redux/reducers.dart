@@ -19,5 +19,9 @@ AppState reducer(AppState prevState, dynamic action){
   {
     newState.albumlist = action.payload;
   }
+  if(action is update_image)
+  {
+    newState.image = action.payload;
+  }
   return newState;
 }

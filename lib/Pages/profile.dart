@@ -1,7 +1,10 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:localization/src/localization_extension.dart';
+import 'package:spotify_clone/Pages/image_picker.dart';
 import 'package:spotify_clone/redux/actions.dart';
 import 'package:spotify_clone/Pages/settings.dart';
 
@@ -49,10 +52,28 @@ class Profile extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const CircleAvatar(
-                    backgroundImage: AssetImage('assets/im.jpg'),
-                    radius: 100,
+                  state.image.toString() == 'assets/im.jpg'
+                      ? CircleAvatar(
+                          backgroundImage: AssetImage(state.image.toString()),
+                          radius: 100,
+                        )
+                      : CircleAvatar(
+                          backgroundImage:
+                              FileImage(File(state.image.toString())),
+                          radius: 100,
+                        ),
+                  const SizedBox(
+                    height: 10,
                   ),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Imagepicker()),
+                        );
+                      },
+                      child: Text('Edit_ProfilePic_Button'.i18n())),
                   const SizedBox(
                     height: 10,
                   ),

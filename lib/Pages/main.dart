@@ -20,7 +20,8 @@ Future<void> main() async {
       mail: 'gocool7598@gmail.com',
       tracklist: [const Track(name: 'name', url: 'https://i.scdn.co/image/ab67616d0000b27326597c053b38c9cf93f8f3a9', artistname: 'artistname')],
       artistlist: [const Artist(name: 'Artist Name', url: 'https://i.scdn.co/image/ab6761610000e5eb2dc40ac263ef07c16a95af4e')],
-      albumlist: [const Album(name: 'Album Name', url: 'https://i.scdn.co/image/ab67616d0000b27326597c053b38c9cf93f8f3a9', tracks: [])]);
+      albumlist: [const Album(name: 'Album Name', url: 'https://i.scdn.co/image/ab67616d0000b27326597c053b38c9cf93f8f3a9', tracks: [])],
+      image: 'assets/im.jpg');
   final Store<AppState> _store = Store<AppState>(reducer,initialState: _initState,middleware: [thunkMiddleware]);
   runApp(Myapp(store: _store));
 }
@@ -42,21 +43,19 @@ class Myapp extends StatelessWidget {
           }
           // define pt_BR as default when de language code is 'pt'
           if (locale?.languageCode == 'fr') {
-            return Locale('fr', 'FR');
+            return const Locale('fr', 'FR');
           }
           if (locale?.languageCode == 'ta') {
-            return Locale('ta', 'IN');
+            return const Locale('ta', 'IN');
           }
           // default language
-          return Locale('en', 'US');
+          return const Locale('en', 'US');
         },
         title: 'Spotify',
         localizationsDelegates: [
-          // delegate from flutter_localization
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,
           GlobalCupertinoLocalizations.delegate,
-          // delegate from localization package.
           LocalJsonLocalization.delegate,
         ],
         supportedLocales:const [

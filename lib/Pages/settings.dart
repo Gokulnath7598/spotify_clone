@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:localization/src/localization_extension.dart';
@@ -42,10 +44,10 @@ class Settings extends StatelessWidget {
                       ),
                       Expanded(
                         child: Text(
-                            'Title_Settings'.i18n(),
-                            style: const TextStyle(
-                                fontSize: 23.0, fontWeight: FontWeight.bold),
-                          ),
+                          'Title_Settings'.i18n(),
+                          style: const TextStyle(
+                              fontSize: 23.0, fontWeight: FontWeight.bold),
+                        ),
                       ),
                     ],
                   ),
@@ -61,13 +63,20 @@ class Settings extends StatelessWidget {
                             );
                           },
                           child: ListTile(
-                            leading: const CircleAvatar(
-                              backgroundImage: AssetImage('assets/im.jpg'),
-                            ),
+                            leading: state.image.toString() == 'assets/im.jpg'
+                                ? CircleAvatar(
+                                    backgroundImage:
+                                        AssetImage(state.image.toString()),
+                                  )
+                                : CircleAvatar(
+                                    backgroundImage:
+                                        FileImage(File(state.image.toString())),
+                                  ),
                             title: Text(
                               state.name.toString(),
                             ),
-                            subtitle: Text('Sub_Title_View_Your_Profile'.i18n()),
+                            subtitle:
+                                Text('Sub_Title_View_Your_Profile'.i18n()),
                             trailing: const Icon(Icons.arrow_forward_ios),
                           ),
                         ),
@@ -81,9 +90,8 @@ class Settings extends StatelessWidget {
                           },
                           child: ListTile(
                             leading: const Icon(Icons.my_location_outlined),
-
                             title: Text(
-                                'Title_My_Location'.i18n(),
+                              'Title_My_Location'.i18n(),
                             ),
                             subtitle: Text('Sub_Title_Location'.i18n()),
                             trailing: const Icon(Icons.arrow_forward_ios),
